@@ -2,11 +2,12 @@
   "scanSettings": {
     "configMode": "AUTO",
     "configExternalURL": "",
+    "enableIaC": "true",
     "baseBranches": []
   },
   "scanSettingsSAST": {
     "enableScan": false,
-    "scanPullRequests": false,
+    "scanPullRequests": true,
     "incrementalScan": true,
     "baseBranches": [],
     "snippetSize": 10
@@ -25,6 +26,7 @@
     "issueType": "DEPENDENCY"
   },
   "remediateSettings": {
+    "extends": ["github>whitesource/merge-confidence:beta"],
     "workflowRules": {
       "enabled": true
     }
